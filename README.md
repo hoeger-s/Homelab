@@ -3,7 +3,7 @@ ARGUS ist der schrittweise Aufbau eines privaten Homelabs zu einer realitätsnah
 Security-Detection.
 Ziel ist es, eine private, praxisnahe Umgebung zum Lernen, Testen und Entwickeln aufzubauen, die langfristig verschiedene Szenarien aus den Bereichen IT-Infrastruktur und IT-Security ermöglicht.
 
-![ARGUS Header](assets/images/README-Header.png)
+![ARGUS Header](assets/images/README-Header_v2.png)
 <sub>*Bild KI-generiert.*</sub>
 
 > **Hinweis:** Dieses Repository befindet sich in aktiver Entwicklung. Dokumentation und README werden fortlaufend erweitert und aktualisiert. Es kann vorkommen, dass einzelne Komponenten bereits umgesetzt, aber noch nicht vollständig dokumentiert sind. Ich bemühe mich, den Stand zeitnah nachzuziehen.
