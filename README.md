@@ -38,7 +38,7 @@ Die Migration wird ebenfalls dokumentiert und hier festgehalten. Bis dahin bleib
 argus-homelab/
 ├── README.md                # Projektüberblick
 ├── docs/                    # Technische Komponenten-Doku (Konfigurationen, relevante Befehle, offene Punkte, etc.)
-|   ├── proxmox-host.md
+|   ├── pve01.md
 |   └── mon01.md
 └── reports/                 # Meilenstein-Reports (Ist → Soll → Umsetzung → Fazit)
                              
@@ -48,9 +48,9 @@ argus-homelab/
 
 | Phase | Komponente | Status | Datum | Doku |
 |---|---|---|---|---|
-| 1 | Proxmox-Installation | ✅ Abgeschlossen | 09-08-2026 | 📝 in Bearbeitung |
-| 2 | Monitoring-Stack | ✅ Abgeschlossen | 13-08-2026 | 📝 in Bearbeitung |
-| 3 | Active Directory | ⏳ In Bearbeitung | - | - |
+| 1 | Proxmox-Installation | ✅ Abgeschlossen | 09-08-2026 | [pve01.md](/docs/pve01.md) |
+| 2 | Monitoring-Stack | ✅ Abgeschlossen | 13-08-2026 | [mon01.md](/docs/mon01.md) |
+| 3 | Active Directory | ⏳ In Bearbeitung | - | 📝 in Bearbeitung |
 
 # 📬 Kontakt
 Bei Fragen, Anregungen, Tipps oder Anmerkungen erreichst du mich gerne über [LinkedIn](https://www.linkedin.com/in/stefan-höger-5a375a339/) oder [XING](https://www.xing.com/profile/Stefan_Hoeger049861/web_profiles?nwt_nav=profile).
