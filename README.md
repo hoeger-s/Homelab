@@ -31,11 +31,23 @@ Aktuell läuft das Homelab über eine handelsübliche FRITZ!Box in einem klassis
 ermöglicht.
 Die Migration wird ebenfalls dokumentiert und hier festgehalten. Bis dahin bleibt die FRITZ!Box die produktive Basis.
 
+# 🧰 Tech-Stack
+
+| Logo | Name | Beschreibung |
+|:---:|---|---|
+| <img src="assets/logos/Proxmox.png" width="24"> | [Proxmox](https://www.proxmox.com/) | Virtualisierungsplattform |
+| <img src="assets/logos/Prometheus.png" width="24"> | [Prometheus](https://prometheus.io/) | Toolkit für Systemüberwachung und Alerting |
+| <img src="assets/logos/Grafana.png" width="24"> | [Grafana](https://grafana.com/) | Überwachsungs-Oberfläche |
+
 # 📁 Repo-Struktur
 
 ```
 argus-homelab/
 ├── README.md                # Projektüberblick
+├── assets/
+│   ├── images/
+│   ├── logos/              
+│   └── screenshots/
 ├── docs/                    # Technische Komponenten-Doku (Konfigurationen, relevante Befehle, offene Punkte, etc.)
 |   ├── pve01.md
 |   └── mon01.md
