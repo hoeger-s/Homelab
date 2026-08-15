@@ -15,7 +15,7 @@ Basis-Hypervisor und Startpunkt für ARGUS. Trägt alle VMs/Container.
 | Mainboard | AUSUS ROG STRIX Z390-I Gaming |
 | BIOS | Version 3006 |
 | BIOS-Datum | 10-12-2021 |
-| Systemlaufwerk | Samsung SSD 970 EVO Plus 250GB NVMe |
+| Systemlaufwerk | Samsung SSD 970 EVO Plus 256GB NVMe |
 | Zusatz-Storage 1 | SanDisk SSD 2TB SATA |
 | Zusatz-Storage 2 | WD Blue HDD 2TB SATA |
 
