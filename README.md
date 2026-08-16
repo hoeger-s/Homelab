@@ -31,13 +31,20 @@ Aktuell läuft das Homelab über eine handelsübliche FRITZ!Box in einem klassis
 ermöglicht.
 Die Migration wird ebenfalls dokumentiert und hier festgehalten. Bis dahin bleibt die FRITZ!Box die produktive Basis.
 
+# 📈 Monitoring
+Zentrale Überwachung von Host und Gastsystemen über Prometheus und Grafana. Details siehe [mon01.md](/docs/mon01.md).
+
+![Grafana-Dashboard](assets/screenshots/Grafana-Dashboard_v1.png)
+<sub>*Grafana-Dashboard_v1*</sub>
+
+
 # 🧰 Tech-Stack
 
 | Logo | Name | Beschreibung |
 |:---:|---|---|
 | <img src="assets/logos/Proxmox.png" width="24"> | [Proxmox](https://www.proxmox.com/) | Virtualisierungsplattform |
 | <img src="assets/logos/Prometheus.png" width="24"> | [Prometheus](https://prometheus.io/) | Toolkit für Systemüberwachung und Alerting |
-| <img src="assets/logos/Grafana.png" width="24"> | [Grafana](https://grafana.com/) | Überwachsungs-Oberfläche |
+| <img src="assets/logos/Grafana.png" width="24"> | [Grafana](https://grafana.com/) | Überwachungs-Oberfläche |
 
 # 📁 Repo-Struktur
 
