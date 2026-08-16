@@ -48,6 +48,7 @@ PubkeyAuthentication yes
 | Node-Exporter (`mon01`) | 1.12.1 | 9100 | OS-Metriken von `mon01` (CPU, RAM, Disk, Netzwerk) |
 | Node-Exporter (`pve01`) | 1.12.1 | 9100 | OS-Metriken von `pve01` (CPU, RAM, Disk, Netzwerk) |
 | PVE-Exporter | 3.10.0 (Python, venv) | 9221 | Proxmox-Verwaltungsebene (VMs, Storage-Pools) über die API |
+| NVIDIA GPU-Exporter (`pve01`) | 1.13.1 | 9835 | GPU-Metriken (Temperatur, Auslastung, VRAM) von `pve01` |
 
 > Node-Exporter läuft sowohl auf `mon01` als auch auf `pve01`, da PVE-Exporter über die API nur grobe Node-Metriken liefert, nicht die OS-Tiefe (CPU pro Core, Netzwerk-Interface-Details).
 
@@ -61,9 +62,10 @@ PVE-Exporter fungiert als Proxy: Prometheus scraped `mon01:9221` mit `pve01` als
 
 ### Firewall-Anpassung auf `pve01`
 
-Node-Exporter-Port (9100) auf `pve01` freigegeben, nur für `mon01`:
+Node-Exporter-Port (9100) und GPU-Exporter-Port (9835) auf `pve01` freigegeben, nur für `mon01`:
 
     IN ACCEPT -source 192.168.178.20 -p tcp -dport 9100 -log nolog
+    IN ACCEPT -source 192.168.178.20 -p tcp -dport 9835 -log nolog
 
 > Node-spezifische Regel (`/etc/pve/nodes/pve01/host.fw`)
 
@@ -76,11 +78,11 @@ Node-Exporter-Port (9100) auf `pve01` freigegeben, nur für `mon01`:
 Grafana 13.1.1, Port 3000. Prometheus als Datenquelle über `http://localhost:9090`.
 
 Referenz-Dashboard "Node Exporter Full" (ID 1860) importiert.
-> Zusätzlich eigenes Dashboard "ARGUS - Homelab Übersicht" konfiguriert für einen schnellen Überblick über die wichtigsten Ressourcen und VMs/Container.
+> Zusätzlich eigenes Dashboard "Homelab Overview" konfiguriert für einen schnellen Überblick über die wichtigsten Ressourcen und VMs/Container.
 
 ### Alert-Regeln
 
-Vier Grafana-managed Regeln, Ordner "ARGUS", Gruppe `argus-infra`, Notification nur über Grafana-UI (kein Contact Point).
+Fünf Grafana-managed Regeln, Ordner "ARGUS", Gruppe `argus-infra`, Notification nur über Grafana-UI (kein Contact Point).
 
 | Regel | Bedingung | Pending Period |
 |---|---|---|
@@ -88,6 +90,7 @@ Vier Grafana-managed Regeln, Ordner "ARGUS", Gruppe `argus-infra`, Notification 
 | `pve01 CPU-Auslastung hoch` | CPU-Last > 85% | 5m |
 | `pve01 RAM-Auslastung hoch` | RAM-Belegung > 85% | 5m |
 | `Storage-Pool fast voll` | Belegung > 85% | 10m |
+| `pve01 GPU-Auslastung hoch` | GPU-Last > 85% | 5m |
 
 > `node_exporter_pve01 down` erkennt Exporter-Ausfall, nicht Host-Totalausfall: `mon01` läuft als Container auf `pve01` - fällt der Host komplett aus, ist auch das Monitoring down. Externes Monitoring geplant s. offene Punkte.
 
