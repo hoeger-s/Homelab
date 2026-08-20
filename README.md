@@ -1,5 +1,5 @@
 # 🛡️ Stefans - Homelab [ARGUS]
-ARGUS ist der schrittweise Aufbau eines privaten Homelabs zu einer realitätsnahen Testumgebung, die typische Enterprise-Infrastruktur abbildet: Virtualisierung, Netzwerk, Windows-/Linux-Systeme, Monitoring und perspektivisch 
+ARGUS ist der schrittweise Aufbau eines privaten Homelabs zu einer realitätsnahen Testumgebung, die typische Enterprise-Infrastruktur abbildet: Virtualisierung, Netzwerk, Windows-/Linux-Systeme, Monitoring und perspektivisch
 Security-Detection.
 Ziel ist es, eine private, praxisnahe Umgebung zum Lernen, Testen und Entwickeln aufzubauen, die langfristig verschiedene Szenarien aus den Bereichen IT-Infrastruktur und IT-Security ermöglicht.
 
@@ -34,7 +34,7 @@ Die Migration wird ebenfalls dokumentiert und hier festgehalten. Bis dahin bleib
 # 📈 Monitoring
 Zentrale Überwachung von Host und Gastsystemen über Prometheus und Grafana. Details siehe [mon01.md](/docs/mon01.md).
 
-![Grafana-Dashboard](assets/screenshots/Grafana-Dashboard_v1.png)
+![Grafana-Dashboard](assets/screenshots/Grafana-Dashboard_v2.png)
 <sub>*Grafana-Dashboard_v1*</sub>
 
 
@@ -53,13 +53,13 @@ argus-homelab/
 ├── README.md                # Projektüberblick
 ├── assets/
 │   ├── images/
-│   ├── logos/              
+│   ├── logos/
 │   └── screenshots/
 ├── docs/                    # Technische Komponenten-Doku (Konfigurationen, relevante Befehle, offene Punkte, etc.)
 |   ├── pve01.md
 |   └── mon01.md
 └── reports/                 # Meilenstein-Reports (Ist → Soll → Umsetzung → Fazit)
-                             
+
 ```
 
 # 📊 Status
